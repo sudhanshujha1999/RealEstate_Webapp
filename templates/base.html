@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="{%  static 'css/style.css' %}">
     <!-- Lightbox -->
     <link rel="stylesheet" href="{%  static 'css/lightbox.min.css' %}">
-    <title>S Real Estate</title>
+    <title>S Real Estate {% block title %}{% endblock %}</title>
 </head>
 <body>
 <!-- Top bar -->
@@ -22,13 +22,14 @@
 {% include 'partials/_navbar.html' %}
 
 {% block content %}
+
 {% endblock %}
 
 <!-- Footer -->
 {% include 'partials/_footer.html' %}
 
-    <script src="assets/js/jquery-3.3.1.min.js "></script>
-    <script src="assets/js/bootstrap.bundle.min.js "></script>
-    <script src="assets/js/main.js "></script>
+    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
 </body>
 </html>
